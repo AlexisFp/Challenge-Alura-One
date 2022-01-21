@@ -4,29 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Challenge Oracle One: Lógica de programación</title>
 </head>
-<body>
+ <body>
   <header>
     <h1 id="title">Encriptador de texto</h1>
   </header>
-  <div class="container">
-    <h2>Solo letras minúsculas, sin acento</h2>
-    <input id="ingreso" class="textspace">
-    <button id="encriptar" class="boton">Encriptar</button>
-    <button id="desencriptar" class="boton">Desencriptar</button>
-  </div>
-  <div class="container">
-    <h2>Mensaje encriptado:</h2>
-    <input id="egreso" class="textspace">
-    <button id="copiar" class="boton">Copiar</button>
-  </div>
+  <section id="box1">
+   <div class="container">
+     <h2>Solo letras minúsculas, sin acento</h2>
+     <input id="ingreso" class="textspace"><br>
+     <button id="encriptar" class="boton">Encriptar</button>
+     <button id="desencriptar" class="boton">Desencriptar</button>
+   </div>
+  </section>
+  <section id="box2">
+   <div class="container">
+     <h2>Mensaje encriptado:</h2>
+     <input id="egreso" class="textspace"><br>
+     <button id="copiar" class="boton">Copiar</button>
+   </div>
+  </section>
 </body>
 </html>
 <script>
   var botonEncriptado = document.querySelector("#encriptar");
   var botonDesencriptado = document.querySelector("#desencriptar");
   var botonCopiado = document.querySelector("#copiar");
+  function minusculas(codigo)
   function encriptar(){
     var codigo = document.getElementById("ingreso");
     var cifrado = String(codigo.value).replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi,"ai").replace(/o/gi,"ober").replace(/u/gi,"ufat");
@@ -42,7 +48,7 @@
     textoCopiado.select();
     document.execCommand("copy");
   }
-  botonEncriptado.onclick = encriptar;
+  botonEncriptado.onclick = minusculas;
   botonDesencriptado.onclick = desencriptar;
   botonCopiado.onclick = copiar;
 </script>
