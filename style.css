@@ -67,3 +67,15 @@ h2 {
  background-color: #65B9F4;
  color: #333;
 }
+
+.clr {
+  clear:both;
+}
+
+#main-footer {
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 300px;
+  padding: 20px;
+  float: bottom;
+}
