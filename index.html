@@ -32,15 +32,14 @@
   var botonEncriptado = document.querySelector("#encriptar");
   var botonDesencriptado = document.querySelector("#desencriptar");
   var botonCopiado = document.querySelector("#copiar");
-  function minusculas(codigo)
   function encriptar(){
     var codigo = document.getElementById("ingreso");
-    var cifrado = String(codigo.value).replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi,"ai").replace(/o/gi,"ober").replace(/u/gi,"ufat");
+    var cifrado = String(codigo.value).replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi,"ai").replace(/o/gi,"ober").replace(/u/gi,"ufat").toLowerCase();
     document.getElementById("egreso").value = cifrado;
   }
   function desencriptar(){
     var codigo = document.getElementById("ingreso");
-    var descifrado = String(codigo.value).replace(/enter/gi, "e").replace(/imes/gi,"i").replace(/ai/gi,"a").replace(/ober/gi,"o").replace(/ufat/gi,"u");
+    var descifrado = String(codigo.value).replace(/enter/gi, "e").replace(/imes/gi,"i").replace(/ai/gi,"a").replace(/ober/gi,"o").replace(/ufat/gi,"u").toLowerCase();
     document.getElementById("egreso").value = descifrado;
   }
   function copiar(){
@@ -48,7 +47,7 @@
     textoCopiado.select();
     document.execCommand("copy");
   }
-  botonEncriptado.onclick = minusculas;
+  botonEncriptado.onclick = encriptar;
   botonDesencriptado.onclick = desencriptar;
   botonCopiado.onclick = copiar;
 </script>
